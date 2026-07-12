@@ -1,2 +1,10 @@
-# nnUnetv2_to_industrialCT
-Medical 3D segmentation models adapted for industrial CT scans via Few-Shot Transfer Learning. Features a custom GDL + Top-K CE loss to solve extreme class imbalance, a rigorous SO(3) spatial rotation benchmark, and topological post-processing to eliminate 3D artifacts and domain-specific noise.
+# 3D Industrial CT Segmentation
+
+Adaptation of `nnU-Net` for industrial CT via Few-Shot Transfer Learning.
+
+## Core Modules
+- **`new_trainer/`**: Custom training logic with GDL + Top-K CE loss to handle extreme class imbalance.
+- **`postcrop/`**: Topological cleaning pipeline (LCC, Visual Hull, Erosion) to remove artifacts.
+- **`rotation_file/`**: $SO(3)$ rotation benchmark using the Haar measure.
+- **`visualization/`**: Robustness analysis and metric plotting.
+- **`create3D_module/`**: Creates 3D model from slices
